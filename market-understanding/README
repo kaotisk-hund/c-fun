@@ -1,0 +1,44 @@
+# market-understanding
+
+This is a description text. The title is the name of the "project". It's not
+that much of a project but mostly a way to develop code for the reason of
+understanding a concept. There is a huge comment block inside `main.c` file that
+is mentioning some of the simple concepts of a market.
+
+There were two main phases:
+1. Build a swarm of bots bombarding a "market" which "market" would have money
+   and shares of an asset and the price would be determined by that ratio.
+2. Build an order book that would be able to keep Offers the bots or humans
+   would made.
+
+One extra phase was to add tests. currently when you compile you get the tests
+only compilation. That should go in a TODO list or something.
+
+The other extra of course was double/float sitty mathematics which then got
+replaced by unsigned integers.
+
+
+Program's truths:
+- It doesn't trade anything of the real world, it's a demo.
+- It 's NOT a Decentralized Exchange
+- It 's NOT a liquidity pool
+- It 's a set of functions to help someone build or run this or other demos.
+
+Features:
+1. qcid() and qcdi()
+	To reserve the ability of showing and getting decimal values, qcid() and
+    qcdi() are introduced.
+2. Account struct with
+	snk 			(Amount of supposed asset)
+	money			(Amount of money)
+	lsnk			(Amount of supposed asset LOCKED)
+	lmoney			(Amount of money LOCKED)
+	last_price_bought	(Last price bought)
+	last_price_sold		(Last price sold)
+3. Offer struct with
+	type 			(OfferType Sell/Buy)
+	price			(set price for the offer)
+	amount			(amount to be exchanged)
+	*account		(account that would be credited)
+
+For more information, read the files in the 'include' folder.
