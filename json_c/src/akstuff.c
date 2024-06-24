@@ -207,37 +207,41 @@ void assignValueToBlock(char *value, Block *z)
 {
 	if (DEBUG) printf("\n\033[2;35mCalling: %s\n\033[0;0m",__func__);
 	//z->self.ipfs = value;
-	strcpy( z->self.ipfs , value);
+	strncpy(z->self.ipfs , value, sizeof(z->self.ipfs));
 	if (DEBUG) printf("\n%s value is a Block!!!!\n", z->self.ipfs);
 }
+
 void assignValueToBlockSignature(char *value, BlockSignature *z)
 {
 	if (DEBUG) printf("\n\033[2;35mCalling: %s\n\033[0;0m",__func__);
 	// z->self.ipfs = value;
-	strcpy( z->self.ipfs , value);
+	strncpy(z->self.ipfs , value, sizeof(z->self.ipfs));
 	if (DEBUG) printf("\n%s value is a BlockSignature!!!!\n", z->self.ipfs);
 }
+
 void assignValueToData(char *value, Data *z)
 {
 	if (DEBUG) printf("\n\033[2;35mCalling: %s\n\033[0;0m",__func__);
 	// z->self.ipfs = value;
-	strcpy( z->self.ipfs , value);
+	strncpy(z->self.ipfs , value, sizeof(z->self.ipfs));
 	if (DEBUG) printf("\n%s value is Data\n", z->self.ipfs);
 
 }
+
 void assignValueToAction(char *value, Action *z)
 {
 	if (DEBUG) printf("\n\033[2;35mCalling: %s\n\033[0;0m",__func__);
 	//(void)value;
 	// z->action = value;
-	strcpy(z->action, value);
+	strncpy(z->action, value, sizeof(z->action));
 	if (DEBUG) printf("\n%s value is Action\n", z->action);
 
 }
+
 void assignValueToModule(char *value, Module *z)
 {
 	if (DEBUG) printf("\n\033[2;35mCalling: %s\n\033[0;0m",__func__);
-	strcpy( z->module, value);
+	strncpy(z->module, value, sizeof(z->module));
 	if (DEBUG) printf("\nMODULE value .... %s --> %s\n",value,z->module);
 	if (DEBUG) printf("\n%s value is Module\n", z->module);
 
@@ -246,38 +250,38 @@ void assignValueToTimestamp(char *value, Timestamp *z)
 {
 	if (DEBUG) printf("\n\033[2;35mCalling: %s\n\033[0;0m",__func__);
 //	z->timestamp = ch2int(value, strlen(value)+1);
-	strcpy(z->timestamp, value);
+	strncpy(z->timestamp, value, sizeof(z->timestamp));
 	if (DEBUG) printf("\n%s was casted from %s is Timestamp\n", z->timestamp, value);
 }
 void assignValueToPrevious(char *value, Previous *z)
 {
 	if (DEBUG) printf("\n\033[2;35mCalling: %s\n\033[0;0m",__func__);
-	strcpy(z->self.ipfs, value);
+	strncpy(z->self.ipfs, value, sizeof(z->self.ipfs));
 	if (DEBUG) printf("\n%s value is Previous\n", z->self.ipfs);
 	complete_the_zblock();
 }
 void assignValueToGpg(char *value, Gpg *z)
 {
 	if (DEBUG) printf("\n\033[2;35mCalling: %s\n\033[0;0m",__func__);
-	strcpy(z->self.ipfs, value);
+	strncpy(z->self.ipfs, value, sizeof(z->self.ipfs));
 	if (DEBUG) printf("\n%s value is Gpg\n", z->self.ipfs);
 }
 void assignValueToDataSignature(char *value, DataSignature *z)
 {
 	if (DEBUG) printf("\n\033[2;35mCalling: %s\n\033[0;0m",__func__);
-	strcpy(z->self.ipfs , value);
+	strncpy(z->self.ipfs, value, sizeof(z->self.ipfs));
 	if (DEBUG) printf("\n%s value is DataSignature\n", z->self.ipfs);
 }
 void assignValueToSignedDataLink(char *value, SignedDataLink *z)
 {
 	if (DEBUG) printf("\n\033[2;35mCalling: %s\n\033[0;0m",__func__);
-	strcpy(z->self.ipfs, value);
+	strncpy(z->self.ipfs, value, sizeof(z->self.ipfs));
 	if (DEBUG) printf("\n%s value is SignedDataLink\n", z->self.ipfs);
 }
 void assignValueToDataLink(char *value, DataLink *z)
 {
 	if (DEBUG) printf("\n\033[2;35mCalling: %s\n\033[0;0m",__func__);
-	strcpy(z->self.ipfs, value);
+	strncpy(z->self.ipfs, value, sizeof(z->self.ipfs));
 	if (DEBUG) printf("\n%s value is DataLink\n", z->self.ipfs);
 }
 
