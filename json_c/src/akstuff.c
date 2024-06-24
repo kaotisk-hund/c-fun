@@ -190,7 +190,7 @@ void assignValueToZblock(char *value, Zblock *z)
 {
 	if (DEBUG) printf("\n\033[2;35mCalling: %s\n\033[0;0m",__func__);
 	// z->self.ipfs = value;
-	strcpy( z->self.ipfs , value);
+	strncpy(z->self.ipfs, value, sizeof(z->self.ipfs));
 	/*
 	char *filename = "czb";
 	FILE *f = fopen(filename,"wb");
